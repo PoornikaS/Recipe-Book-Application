@@ -2,8 +2,6 @@
 
 A beautiful and feature-rich recipe exploration application built with modern web technologies. Discover, save, and share your favorite recipes with ease!
 
-![Recipe Book](https://www.bing.com/images/search?view=detailV2&ccid=bUuXqE%2fC&id=749E0960B08A6A20CFBB76F382C6F9EB909A2225&thid=OIP.bUuXqE_CEZBhB2bySia8fAHaE1&mediaurl=https%3a%2f%2fwww.snapfish.com%2fblog%2fwp-content%2fuploads%2f2022%2f01%2fcover-blog-.jpg&exph=640&expw=980&q=recipe+book+pic&simid=608012223017261379&FORM=IRPRST&ck=587E5179AB80C6116340F1FD1454CDBA&selectedIndex=7&itb=0)
-
 
 ## 🔗 Live Demo
 
