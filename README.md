@@ -1,8 +1,14 @@
-# 🍳 Recipe Explorer
+# 🍳 Recipe Book
 
 A beautiful and feature-rich recipe exploration application built with modern web technologies. Discover, save, and share your favorite recipes with ease!
 
-![Recipe Explorer](https://source.unsplash.com/1600x900/?cooking,food)
+![Recipe Book](https://www.bing.com/images/search?view=detailV2&ccid=bUuXqE%2fC&id=749E0960B08A6A20CFBB76F382C6F9EB909A2225&thid=OIP.bUuXqE_CEZBhB2bySia8fAHaE1&mediaurl=https%3a%2f%2fwww.snapfish.com%2fblog%2fwp-content%2fuploads%2f2022%2f01%2fcover-blog-.jpg&exph=640&expw=980&q=recipe+book+pic&simid=608012223017261379&FORM=IRPRST&ck=587E5179AB80C6116340F1FD1454CDBA&selectedIndex=7&itb=0)
+
+
+## 🔗 Live Demo
+
+[View Live Demo](https://myne-recipe-book.vercel.app/)
+
 
 ## ✨ Features
 
@@ -51,8 +57,8 @@ src/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/recipe-explorer.git
-cd recipe-explorer
+git clone https://github.com/PoornikaS/Recipe-Book-Application.git
+cd Recipe-Book-Application
 ```
 
 2. Install dependencies:
@@ -101,13 +107,6 @@ yarn dev
 - Optimized for all screen sizes
 - Smooth animations and transitions
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -116,6 +115,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Lucide Icons](https://lucide.dev) for beautiful icons
 - [React](https://reactjs.org) and the React community
 
-## 🔗 Live Demo
 
-[View Live Demo](#) <!-- Add your live demo link when deployed -->
