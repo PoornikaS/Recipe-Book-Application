@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { Recipe, RecipeDetail } from '../types/recipe';
 
-const API_KEY = 'd02d67cc7eff4f24a385e21be8b540e1';
-const BASE_URL = 'https://api.spoonacular.com/recipes';
+const API_KEY = import.meta.env.VITE_SPOONACULAR_API_KEY;
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -16,12 +16,13 @@ export const getRandomRecipes = async (number: number = 12): Promise<Recipe[]> =
     const response = await api.get('/random', {
       params: { 
         number,
-        tags: 'vegetarian,non-vegetarian'
+        addRecipeInformation: true
       },
     });
     return response.data.recipes.map((recipe: any) => ({
       ...recipe,
-      isVegetarian: recipe.vegetarian || false
+      isVegetarian: recipe.vegetarian || false,
+      rating: recipe.spoonacularScore ? recipe.spoonacularScore / 20 : undefined // Convert to 5-star scale
     }));
   } catch (error) {
     console.error('Error fetching recipes:', error instanceof Error ? error.message : String(error));
@@ -46,7 +47,8 @@ export const searchRecipes = async (
     });
     return response.data.results.map((recipe: any) => ({
       ...recipe,
-      isVegetarian: recipe.vegetarian || false
+      isVegetarian: recipe.vegetarian || false,
+      rating: recipe.spoonacularScore ? recipe.spoonacularScore / 20 : undefined
     }));
   } catch (error) {
     console.error('Error searching recipes:', error instanceof Error ? error.message : String(error));
@@ -59,7 +61,8 @@ export const getRecipeById = async (id: number): Promise<RecipeDetail> => {
     const response = await api.get(`/${id}/information`);
     return {
       ...response.data,
-      isVegetarian: response.data.vegetarian || false
+      isVegetarian: response.data.vegetarian || false,
+      rating: response.data.spoonacularScore ? response.data.spoonacularScore / 20 : undefined
     };
   } catch (error) {
     console.error('Error fetching recipe details:', error instanceof Error ? error.message : String(error));
